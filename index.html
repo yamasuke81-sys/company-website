@@ -111,6 +111,16 @@
       color: #fff;
     }
     .btn-airbnb:hover { background: #e0484d; color: #fff; }
+    .badge-coming-soon {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      letter-spacing: 1px;
+    }
 
     /* お問い合わせ */
     .contact-section { background: var(--dark); color: #fff; }
@@ -248,6 +258,18 @@ const PROPERTIES = [
     bookingUrl: 'https://www.booking.com/hotel/jp/the-terrace-chang-bang.ja.html',
     airbnbUrl: 'https://www.airbnb.jp/rooms/1496523336810635360',
   },
+  {
+    name: 'YADO KOMACHI Hiroshima（広島市中心部）',
+    description: '広島市中心部に位置する好立地の宿。観光にもビジネスにも便利です。',
+    photos: [],
+    comingSoon: true,
+  },
+  {
+    name: 'Pocket House WAKA-KUSA（広島駅北口徒歩12分）',
+    description: '広島駅北口から徒歩12分。コンパクトで快適な滞在をお楽しみください。',
+    photos: [],
+    comingSoon: true,
+  },
   // 施設を追加するにはここにオブジェクトを追加
 ];
 
@@ -297,6 +319,7 @@ function renderProperties() {
           <div class="property-body">
             <h3>${prop.name}</h3>
             <p>${prop.description}</p>
+            ${prop.comingSoon ? `<span class="badge-coming-soon">COMING SOON</span>` : `
             <div class="d-flex gap-2 flex-wrap">
               <a href="${prop.bookingUrl}" target="_blank" rel="noopener" class="btn-booking btn-booking-com">
                 <i class="bi bi-calendar-check me-1"></i>Booking.com
@@ -304,7 +327,7 @@ function renderProperties() {
               ${prop.airbnbUrl ? `<a href="${prop.airbnbUrl}" target="_blank" rel="noopener" class="btn-booking btn-airbnb">
                 <i class="bi bi-house-door me-1"></i>Airbnb
               </a>` : ''}
-            </div>
+            </div>`}
           </div>
         </div>
       </div>`;
