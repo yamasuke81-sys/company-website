@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>株式会社〇〇 | 不動産・旅館・宅建・製図</title>
-  <meta name="description" content="不動産賃貸業、旅館業、宅建業、製図請負。快適な宿泊施設の運営と不動産サービスを提供しています。">
+  <title>合同会社八朔 | 不動産・旅館・宅建・製図</title>
+  <meta name="description" content="合同会社八朔 — 不動産賃貸業、旅館業、宅建業、製図請負。快適な宿泊施設の運営と不動産サービスを提供しています。">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <style>
@@ -16,107 +16,43 @@
       --light-bg: #f8f9fa;
     }
     body { font-family: 'Helvetica Neue', 'Hiragino Sans', 'Yu Gothic', sans-serif; color: #333; }
-
-    /* ナビゲーション */
     .navbar { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
     .navbar-brand { font-weight: 700; color: var(--primary) !important; font-size: 1.3rem; }
     .nav-link { font-weight: 500; color: #555 !important; }
     .nav-link:hover { color: var(--primary) !important; }
-
-    /* ヒーロー */
-    .hero {
-      background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%);
-      color: #fff;
-      padding: 120px 0 80px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="80" cy="20" r="40" fill="rgba(201,168,76,0.08)"/><circle cx="20" cy="80" r="30" fill="rgba(44,95,45,0.08)"/></svg>');
-      background-size: cover;
-    }
+    .hero { background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%); color: #fff; padding: 120px 0 80px; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="80" cy="20" r="40" fill="rgba(201,168,76,0.08)"/><circle cx="20" cy="80" r="30" fill="rgba(44,95,45,0.08)"/></svg>'); background-size: cover; }
     .hero > .container { position: relative; z-index: 1; }
     .hero h1 { font-weight: 800; font-size: 2.8rem; margin-bottom: 1rem; }
     .hero p { font-size: 1.2rem; opacity: 0.85; max-width: 600px; }
-
-    /* セクション共通 */
     section { padding: 80px 0; }
     .section-title { font-weight: 700; font-size: 2rem; margin-bottom: 0.5rem; color: var(--dark); }
     .section-subtitle { color: #888; margin-bottom: 3rem; }
-
-    /* 事業紹介 */
-    .service-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      transition: transform 0.3s, box-shadow 0.3s;
-      height: 100%;
-    }
+    .service-card { background: #fff; border-radius: 16px; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; height: 100%; }
     .service-card:hover { transform: translateY(-6px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
-    .service-icon {
-      width: 70px; height: 70px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      border-radius: 16px;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1.2rem;
-      font-size: 1.8rem;
-      color: #fff;
-    }
+    .service-icon { width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; font-size: 1.8rem; color: #fff; }
     .service-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; }
     .service-card p { font-size: 0.95rem; color: #666; }
-
-    /* 宿泊施設 */
     .bg-light-custom { background: var(--light-bg); }
-    .property-card {
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      background: #fff;
-      transition: transform 0.3s;
-    }
+    .property-card { border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: #fff; transition: transform 0.3s; }
     .property-card:hover { transform: translateY(-4px); }
-    .property-carousel img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
+    .property-carousel img { width: 100%; height: 260px; object-fit: cover; }
     .property-body { padding: 1.5rem; }
     .property-body h3 { font-weight: 700; font-size: 1.2rem; margin-bottom: 0.5rem; }
     .property-body p { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
-    .btn-booking {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 0.5rem 1.5rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s;
-    }
+    .btn-booking { background: var(--accent); color: #fff; border: none; border-radius: 8px; padding: 0.5rem 1.5rem; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.3s; }
     .btn-booking:hover { background: #b8932f; color: #fff; }
-
-    /* お問い合わせ */
     .contact-section { background: var(--dark); color: #fff; }
     .contact-section .section-title { color: #fff; }
     .contact-info-item { margin-bottom: 1.5rem; }
     .contact-info-item i { color: var(--accent); font-size: 1.3rem; margin-right: 0.8rem; }
-
-    /* フッター */
     footer { background: #111; color: #aaa; padding: 2rem 0; font-size: 0.9rem; }
   </style>
 </head>
 <body>
-
-<!-- ナビゲーション -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">株式会社〇〇</a>
+    <a class="navbar-brand" href="#">合同会社八朔</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -129,16 +65,12 @@
     </div>
   </div>
 </nav>
-
-<!-- ヒーロー -->
 <section class="hero">
   <div class="container">
     <h1>暮らしと旅を、<br>もっと豊かに。</h1>
     <p>不動産賃貸・旅館運営・宅建・製図の総合サービスで、お客様の多様なニーズにお応えします。</p>
   </div>
 </section>
-
-<!-- 事業内容 -->
 <section id="services">
   <div class="container">
     <div class="text-center">
@@ -157,7 +89,7 @@
         <div class="service-card">
           <div class="service-icon"><i class="bi bi-house-heart"></i></div>
           <h3>旅館業</h3>
-          <p>心温まるおもてなしで、旅の思い出をお届け。複数施設を運営中です。</p>
+          <p>無人チェックインの宿で快適な旅の思い出をお届け。複数施設を運営中です。</p>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
@@ -177,21 +109,15 @@
     </div>
   </div>
 </section>
-
-<!-- 宿泊施設 -->
 <section id="properties" class="bg-light-custom">
   <div class="container">
     <div class="text-center">
       <h2 class="section-title">宿泊施設</h2>
       <p class="section-subtitle">運営中の宿泊施設をご紹介します</p>
     </div>
-    <div class="row g-4" id="propertyList">
-      <!-- JavaScriptで動的生成 -->
-    </div>
+    <div class="row g-4" id="propertyList"></div>
   </div>
 </section>
-
-<!-- お問い合わせ -->
 <section id="contact" class="contact-section">
   <div class="container">
     <div class="row">
@@ -200,116 +126,53 @@
         <p class="mb-4" style="opacity:0.7;">お気軽にご連絡ください。</p>
         <div class="contact-info-item">
           <i class="bi bi-geo-alt-fill"></i>
-          <span>〒000-0000 ○○県○○市○○町0-0-0</span>
+          <span>〒736-0061 広島県安芸郡海田町上市4番23ー12号</span>
         </div>
         <div class="contact-info-item">
           <i class="bi bi-telephone-fill"></i>
-          <span>000-0000-0000</span>
+          <span>082-521-8535</span>
         </div>
         <div class="contact-info-item">
           <i class="bi bi-envelope-fill"></i>
-          <span>info@example.com</span>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <!-- Googleマップ埋め込み用（URLを差し替えてください） -->
-        <div style="background:#2a2a4a;border-radius:16px;height:280px;display:flex;align-items:center;justify-content:center;color:#888;">
-          <span>Google Maps 埋め込みエリア<br><small>iframe の src を差し替えてください</small></span>
+          <span>81hassac@gmail.com</span>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- フッター -->
 <footer>
   <div class="container text-center">
-    <p class="mb-0">&copy; 2026 株式会社〇〇 All Rights Reserved.</p>
+    <p class="mb-0">&copy; 2026 合同会社八朔 All Rights Reserved.</p>
   </div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// ============================================================
-//  施設データ（ここを編集するだけで施設の追加・変更ができます）
-// ============================================================
 const PROPERTIES = [
   {
-    name: '施設名A',
-    description: '○○エリアの一棟貸し宿。最大6名様まで宿泊可能。BBQ設備完備。',
-    photos: [
-      // 写真のURLを追加してください（複数可）
-      // 'https://example.com/photo1.jpg',
-      // 'https://example.com/photo2.jpg',
-    ],
-    bookingUrl: 'https://example.com/booking-a', // 予約ページURL
-  },
-  {
-    name: '施設名B',
-    description: '駅近の和モダン宿。観光にもビジネスにも最適なロケーション。',
+    name: 'the Terrace 長浜',
+    description: '瀬戸内海を一望できる高台の一棟貸切宿。大テラスでBBQ・花火も楽しめます。最大10名宿泊OK、駐車場3台完備。',
     photos: [],
-    bookingUrl: 'https://example.com/booking-b',
+    bookingUrl: 'https://www.booking.com/hotel/jp/the-terrace-chang-bang.ja.html',
   },
-  // 施設を追加するにはここにオブジェクトを追加
 ];
-
-// ============================================================
-//  施設カード生成
-// ============================================================
 function renderProperties() {
   const container = document.getElementById('propertyList');
-  if (PROPERTIES.length === 0) {
-    container.innerHTML = '<p class="text-center text-muted">施設情報は準備中です。</p>';
-    return;
-  }
-
+  if (PROPERTIES.length === 0) { container.innerHTML = '<p class="text-center text-muted">施設情報は準備中です。</p>'; return; }
   container.innerHTML = PROPERTIES.map((prop, idx) => {
-    // 写真カルーセル or プレースホルダー
     let photoHtml;
     if (prop.photos.length > 1) {
-      const indicators = prop.photos.map((_, i) =>
-        `<button type="button" data-bs-target="#carousel${idx}" data-bs-slide-to="${i}" ${i===0?'class="active"':''}></button>`
-      ).join('');
-      const slides = prop.photos.map((url, i) =>
-        `<div class="carousel-item ${i===0?'active':''}"><img src="${url}" alt="${prop.name} 写真${i+1}"></div>`
-      ).join('');
-      photoHtml = `
-        <div id="carousel${idx}" class="carousel slide property-carousel" data-bs-ride="carousel">
-          <div class="carousel-indicators">${indicators}</div>
-          <div class="carousel-inner">${slides}</div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carousel${idx}" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carousel${idx}" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>`;
+      const indicators = prop.photos.map((_, i) => `<button type="button" data-bs-target="#carousel${idx}" data-bs-slide-to="${i}" ${i===0?'class="active"':''}></button>`).join('');
+      const slides = prop.photos.map((url, i) => `<div class="carousel-item ${i===0?'active':''}"><img src="${url}" alt="${prop.name} 写真${i+1}"></div>`).join('');
+      photoHtml = `<div id="carousel${idx}" class="carousel slide property-carousel" data-bs-ride="carousel"><div class="carousel-indicators">${indicators}</div><div class="carousel-inner">${slides}</div><button class="carousel-control-prev" type="button" data-bs-target="#carousel${idx}" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#carousel${idx}" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div>`;
     } else if (prop.photos.length === 1) {
       photoHtml = `<div class="property-carousel"><img src="${prop.photos[0]}" alt="${prop.name}"></div>`;
     } else {
-      photoHtml = `<div style="height:260px;background:#e9ecef;display:flex;align-items:center;justify-content:center;color:#aaa;">
-        <div class="text-center"><i class="bi bi-camera" style="font-size:2rem;"></i><br><small>写真準備中</small></div>
-      </div>`;
+      photoHtml = `<div style="height:260px;background:#e9ecef;display:flex;align-items:center;justify-content:center;color:#aaa;"><div class="text-center"><i class="bi bi-camera" style="font-size:2rem;"></i><br><small>写真準備中</small></div></div>`;
     }
-
-    return `
-      <div class="col-md-6 col-lg-4">
-        <div class="property-card">
-          ${photoHtml}
-          <div class="property-body">
-            <h3>${prop.name}</h3>
-            <p>${prop.description}</p>
-            <a href="${prop.bookingUrl}" target="_blank" rel="noopener" class="btn-booking">
-              <i class="bi bi-calendar-check me-1"></i>予約する
-            </a>
-          </div>
-        </div>
-      </div>`;
+    return `<div class="col-md-6 col-lg-4"><div class="property-card">${photoHtml}<div class="property-body"><h3>${prop.name}</h3><p>${prop.description}</p><a href="${prop.bookingUrl}" target="_blank" rel="noopener" class="btn-booking"><i class="bi bi-calendar-check me-1"></i>予約する</a></div></div></div>`;
   }).join('');
 }
-
 document.addEventListener('DOMContentLoaded', renderProperties);
 </script>
-
 </body>
 </html>
