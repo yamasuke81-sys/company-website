@@ -92,17 +92,25 @@
     .property-body h3 { font-weight: 700; font-size: 1.2rem; margin-bottom: 0.5rem; }
     .property-body p { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
     .btn-booking {
-      background: var(--accent);
-      color: #fff;
       border: none;
       border-radius: 8px;
-      padding: 0.5rem 1.5rem;
+      padding: 0.5rem 1.2rem;
       font-weight: 600;
       text-decoration: none;
       display: inline-block;
-      transition: background 0.3s;
+      transition: background 0.3s, opacity 0.3s;
+      font-size: 0.9rem;
     }
-    .btn-booking:hover { background: #c9a84c; color: #fff; }
+    .btn-booking-com {
+      background: #003580;
+      color: #fff;
+    }
+    .btn-booking-com:hover { background: #00256e; color: #fff; }
+    .btn-airbnb {
+      background: #FF5A5F;
+      color: #fff;
+    }
+    .btn-airbnb:hover { background: #e0484d; color: #fff; }
 
     /* お問い合わせ */
     .contact-section { background: var(--dark); color: #fff; }
@@ -238,6 +246,7 @@ const PROPERTIES = [
       'terrace1.jpg',
     ],
     bookingUrl: 'https://www.booking.com/hotel/jp/the-terrace-chang-bang.ja.html',
+    airbnbUrl: 'https://www.airbnb.jp/rooms/1496523336810635360',
   },
   // 施設を追加するにはここにオブジェクトを追加
 ];
@@ -288,9 +297,14 @@ function renderProperties() {
           <div class="property-body">
             <h3>${prop.name}</h3>
             <p>${prop.description}</p>
-            <a href="${prop.bookingUrl}" target="_blank" rel="noopener" class="btn-booking">
-              <i class="bi bi-calendar-check me-1"></i>予約する
-            </a>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="${prop.bookingUrl}" target="_blank" rel="noopener" class="btn-booking btn-booking-com">
+                <i class="bi bi-calendar-check me-1"></i>Booking.com
+              </a>
+              ${prop.airbnbUrl ? `<a href="${prop.airbnbUrl}" target="_blank" rel="noopener" class="btn-booking btn-airbnb">
+                <i class="bi bi-house-door me-1"></i>Airbnb
+              </a>` : ''}
+            </div>
           </div>
         </div>
       </div>`;
